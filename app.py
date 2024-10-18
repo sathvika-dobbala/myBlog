@@ -19,18 +19,5 @@ def resume():
 def projects():
     return render_template("projects.html")
 
-@app.route("/contact")
-def contact():
-    return '''
-    <h1>Contact Page</h1>
-    <p>Get in touch with me here.</p>
-    <nav>
-        <a href="/">Home</a> | 
-        <a href="/about">About</a> | 
-        <a href="/resume">Resume</a> | 
-        <a href="/projects">Projects</a>
-    </nav>
-    '''
-
 if __name__ == "__main__":
     app.run(debug=True)
