@@ -1,0 +1,58 @@
+/* General page styling */
+body {
+    background-color: #2E4D39; /* Forest Green */
+    color: #D4AF37; /* Gold */
+    font-family: 'Merriweather', serif; /* Journalism-style font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-bottom: 60px; /* Add padding to avoid footer overlap */
+}
+
+/* Header styling */
+header {
+    background: #2E4D39;
+    color: #D4AF37;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation bar styling */
+nav ul {
+    background: #1F392B; /* Slightly darker green */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section styling */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    background: #1F392B;
+    color: #D4AF37;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
