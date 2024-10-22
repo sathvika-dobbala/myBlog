@@ -19,11 +19,12 @@ header {
 
 /* Navigation bar styling */
 nav ul {
-    background: #1F392B; /* Slightly darker green */
+    background: #000000; /* Black background */
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 nav ul li {
@@ -31,9 +32,9 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #D4AF37;
+    color: #D4AF37; /* Gold links */
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bold; /* Bolded links */
 }
 
 nav ul li a:hover {
