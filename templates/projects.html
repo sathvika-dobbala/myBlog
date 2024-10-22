@@ -1,3 +1,4 @@
+<!-- templates/projects.html -->
 {% extends 'base.html' %}
 
 {% block title %}Projects{% endblock %}
@@ -6,14 +7,38 @@
 
 {% block content %}
 <section>
-    <h2>EY Case Competition</h2>
-    <p>A recent project I've been a part of was my team's submission for our EY Case Competition surrounding developing a technical solution for a fictional national bank's current global circumstance.</p>
-    <p>During my experience with helping develop and present this solution, I learned key skills in the importance of communicating IT strategy with overall business goals, and effectively analyzing a complex case with a wide array of globalized issues and dependencies.</p>
-    
-    <!-- Add an image of the slide deck cover -->
-    <img src="{{ url_for('static', filename='images/slidedeckcover.png') }}" alt="Slide Deck Cover" style="width: 100%; max-width: 600px; margin: 20px 0;">
+    <h2>My Projects</h2>
 
-    <!-- Provide a download link to the PowerPoint PDF -->
-    <p>If you'd like to download the full slide deck, you can download it <a href="{{ url_for('static', filename='docs/EYCaseComp.pdf') }}" target="_blank">here</a>.</p>
+    <!-- Create a table for the projects -->
+    <table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+        <tr>
+            <th>Project</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+
+        <!-- Row for EY Case Competition -->
+        <tr>
+            <td>EY Case Competition</td>
+            <td>A recent project I've been a part of was my team's submission for our EY Case Competition surrounding developing a technical solution for a fictional national bank's current global circumstance.</td>
+            <td>
+                <img src="{{ url_for('static', filename='images/slidedeckcover.png') }}" alt="EY Case Deck" style="width: 100%; max-width: 200px;">
+                <p><a href="{{ url_for('static', filename='docs/EYCaseComp.pdf') }}" target="_blank">Download Slide Deck</a></p>
+            </td>
+        </tr>
+
+        <!-- Row for Digital Humans Case Competition -->
+        <tr>
+            <td>Digital Humans Case Competition</td>
+            <td>This case was aimed at pitching the benefits of implementing Digital Humans into the IU Health hospital system in the state of Indiana.</td>
+            <td>
+                <img src="{{ url_for('static', filename='images/slidedeckcoverr.png') }}" alt="Digital Humans Deck" style="width: 100%; max-width: 200px;">
+                <p><a href="{{ url_for('static', filename='docs/DigitalHumansComp.pdf') }}" target="_blank">Download Slide Deck</a></p>
+            </td>
+        </tr>
+
+    </table>
+
 </section>
 {% endblock %}
+
