@@ -1,42 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-	    <li><a href="forms.html">Contact Form</a></li>
-        </ul>
-    </nav>
+{% extends 'base.html' %}
 
-    <header>
-        <h1>My Projects</h1>
-    </header>
+{% block title %}Projects{% endblock %}
 
-    <section>
-        <h2>EY Case Competition</h2>
-        <p>A recent project I've been a part of was my team's submission for our EY Case Competition surrounding developing a technical solution for a fictional national bank's current global circumstance.</p>
-        <p>During my experience with helping develop and present this solution, I learned key skills in the importance of communicating IT strategy with overall business goals, and effectively analyzing a complex case with a wide array of globalized issues and dependencies.</p>
-        
-        <!-- Add an image of the slide deck cover -->
-        <img src="images/slidedeckcover.png" alt="Slide Deck Cover" style="width: 100%; max-width: 600px; margin: 20px 0;">
+{% block header %}My Projects{% endblock %}
 
-        <!-- Provide a download link to the PowerPoint PDF -->
-        <p>If you'd like to download the full slide deck, you can download it <a href="docs/EYCaseComp.pdf" target="_blank">here</a>.</p>
-    </section>
+{% block content %}
+<section>
+    <h2>EY Case Competition</h2>
+    <p>A recent project I've been a part of was my team's submission for our EY Case Competition surrounding developing a technical solution for a fictional national bank's current global circumstance.</p>
+    <p>During my experience with helping develop and present this solution, I learned key skills in the importance of communicating IT strategy with overall business goals, and effectively analyzing a complex case with a wide array of globalized issues and dependencies.</p>
+    
+    <!-- Add an image of the slide deck cover -->
+    <img src="{{ url_for('static', filename='images/slidedeckcover.png') }}" alt="Slide Deck Cover" style="width: 100%; max-width: 600px; margin: 20px 0;">
 
-    <footer>
-        <p>&copy; 2024 Sathvika Dobbala</p>
-    </footer>
-</body>
-</html>
+    <!-- Provide a download link to the PowerPoint PDF -->
+    <p>If you'd like to download the full slide deck, you can download it <a href="{{ url_for('static', filename='docs/EYCaseComp.pdf') }}" target="_blank">here</a>.</p>
+</section>
+{% endblock %}
