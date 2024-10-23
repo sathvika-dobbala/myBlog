@@ -1,30 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About Me</a></li>
-            <li><a href="/resume">Resume</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/forms">Contact Form</a></li>
-        </ul>
-    </nav>
+<!-- templates/resume.html -->
+{% extends 'base.html' %}
+
+{% block title %}Resume{% endblock %}
+
+{% block content %}
     <header>
         <h1>Resume</h1>
     </header>
     <section>
-        <p>Download my full resume <a href="docs/resume.pdf" target="_blank">here</a>.</p>
+        <p>Download my full resume <a href="{{ url_for('static', filename='docs/resume.pdf') }}" target="_blank">here</a>.</p>
     </section>
-    <footer>
-        <p>&copy; 2024 Sathvika Dobbala</p>
-    </footer>
-</body>
-</html>
+{% endblock %}
