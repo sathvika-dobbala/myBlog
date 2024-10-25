@@ -43,6 +43,10 @@ def add_project():
 
     return render_template("forms.html")
 
+@app.route("/delete/<int:project_id>", methods=["POST"])
+def delete_project(project_id):
+    Project.delete_project(project_id)  # Call the method to delete the project
+    return redirect("/projects")
 
 
 if __name__ == "__main__":
