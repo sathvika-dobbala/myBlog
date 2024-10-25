@@ -17,28 +17,17 @@
             <th>Image</th>
         </tr>
 
-        <!-- Row for EY Case Competition -->
+        <!-- Loop through projects fetched from the database -->
+        {% for project in projects %}
         <tr>
-            <td>EY Case Competition</td>
-            <td>A recent project I've been a part of was my team's submission for our EY Case Competition surrounding developing a technical solution for a fictional national bank's current global circumstance.</td>
+            <td>{{ project[1] }}</td> <!-- Project Title -->
+            <td>{{ project[2] }}</td> <!-- Project Description -->
             <td>
-                <img src="{{ url_for('static', filename='images/slidedeckcover.png') }}" alt="EY Case Deck" style="width: 100%; max-width: 200px;">
-                <p><a href="{{ url_for('static', filename='docs/EYCaseComp.pdf') }}" target="_blank">Download Slide Deck</a></p>
+                <img src="{{ url_for('static', filename='images/' + project[3]) }}" alt="{{ project[1] }}" style="width: 100%; max-width: 200px;">
+                <p><a href="{{ url_for('static', filename='docs/' + project[3]) }}" target="_blank">Download Slide Deck</a></p>
             </td>
         </tr>
-
-        <!-- Row for Digital Humans Case Competition -->
-        <tr>
-            <td>Digital Humans Case Competition</td>
-            <td>This case was aimed at pitching the benefits of implementing Digital Humans into the IU Health hospital system in the state of Indiana.</td>
-            <td>
-                <img src="{{ url_for('static', filename='images/slidedeckcoverr.png') }}" alt="Digital Humans Deck" style="width: 100%; max-width: 200px;">
-                <p><a href="{{ url_for('static', filename='docs/DigitalHumansComp.pdf') }}" target="_blank">Download Slide Deck</a></p>
-            </td>
-        </tr>
-
+        {% endfor %}
     </table>
-
 </section>
 {% endblock %}
-
